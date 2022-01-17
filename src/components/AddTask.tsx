@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux';
 import { asyncAddTask } from '../actions/tasksAction';
 
-export const AddTask = () => {
+const AddTask = () => {
 
     const [description, setDescription] = React.useState("");
     const dispatch = useDispatch();
@@ -34,3 +34,5 @@ export const AddTask = () => {
         </div>
     )
 }
+
+export default AddTask;

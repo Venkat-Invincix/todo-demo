@@ -11,6 +11,8 @@
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
     "axios": "^0.24.0",
+    "check-prop-types": "^1.1.2",
+    "jest-enzyme": "^7.1.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
@@ -43,5 +45,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.10.11",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.6",
+    "babel-plugin-react-remove-properties": "^0.3.0",
+    "enzyme": "^3.11.0"
   }
 }

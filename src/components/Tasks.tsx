@@ -3,7 +3,7 @@ import { useDispatch, useSelector, } from 'react-redux'
 import { asyncDeleteTask, asyncGetAllTasks, asyncUpdateTask } from '../actions/tasksAction';
 import { asyncLogin } from '../actions/userAction';
 
-export const Tasks = () => {
+const Tasks = () => {
 
     const tasks: Array<Object> = useSelector((state: any) => {
         return state.tasks;
@@ -62,3 +62,5 @@ export const Tasks = () => {
         </div>
     )
 }
+
+export default Tasks;
