@@ -115,3 +115,9 @@ export const updateTask = (id: any) => {
         payload: id
     }
 }
+
+export const correctGuess = () => {
+    return {
+        type: 'CorrectGuess'
+    }
+}
