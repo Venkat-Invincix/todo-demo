@@ -24,13 +24,18 @@ const AddTask = () => {
     }
 
     return (
-        <div>
+        <div data-test="component-addtask">
             <input
                 type="text"
                 onChange={handleChangeDescription}
-                value={description} />
+                value={description}
+                data-test="addtask-input" />
 
-            <button onClick={handleChangeAddTask}>Submit</button>
+            <button
+                data-test="addtask-submit-button"
+                onClick={handleChangeAddTask}>
+                Submit
+            </button>
         </div>
     )
 }
