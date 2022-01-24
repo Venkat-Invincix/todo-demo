@@ -1,4 +1,5 @@
-import { createStore, combineReducers } from "redux";
+import { createStore, combineReducers, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
 import taskReducer from "../src/reducers/tasksReducer";
 
 export const storeFactory = (initialState: any) => {
@@ -18,3 +19,9 @@ export const findByTestAttr = (wrapper: any, val: string) => {
     return wrapper.find(`[data-test='${val}']`)
 }
 
+export const testStore = () => {
+    const store = createStore(combineReducers({
+        tasks: taskReducer
+    }), applyMiddleware(thunk))
+    return store;
+}

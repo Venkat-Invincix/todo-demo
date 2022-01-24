@@ -3,7 +3,7 @@ import { Dispatch } from 'redux'
 
 export const asyncGetAllTasks = () => {
     return (dispatch: Dispatch) => {
-        axios.get('https://api-nodejs-todolist.herokuapp.com/task',
+        return axios.get('https://api-nodejs-todolist.herokuapp.com/task',
             {
                 headers: {
                     'Authorization': 'Bearer ' + localStorage.getItem('token')
@@ -12,7 +12,7 @@ export const asyncGetAllTasks = () => {
         )
             .then((response) => {
                 const data = response.data;
-                dispatch(getAllTasks(data.data))
+                dispatch(getAllTasks(data.data));
             })
             .catch((err) => {
                 console.log(err.message)
